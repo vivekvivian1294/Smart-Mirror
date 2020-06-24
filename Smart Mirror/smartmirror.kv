@@ -1,0 +1,586 @@
+#:  import datetime datetime
+
+<MyScreenManager>:
+  MainWindow:
+  NewsWindow:
+  CalendarWindow:
+  WeatherWindow:
+
+<WeatherWindow>:
+  name: 'weather_screen'
+  GridLayout:
+    row_force_default: True
+    row_default_height: 221
+    col_force_default: True
+    col_default_width: 142
+    cols: 7
+    rows: 3
+    RelativeLayout:
+      Label:
+        id: monday_label
+        font_size: 25
+        text: 'Monday'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+
+    RelativeLayout:
+      Label:
+        id: tuesday_label
+        font_size: 25
+        text: 'Tuesday'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: wednesday_label
+        font_size: 25
+        text: 'Wednesday'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: thursday_label
+        font_size: 25
+        text: 'Thursday'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: friday_label
+        font_size: 25
+        text: 'Friday'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: saturday_label
+        font_size: 25
+        text: 'Saturday'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: sunday_label
+        font_size: 25
+        text: 'Sunday'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: monday_weather_label
+        font_size: 20
+        pos_hint: 1, None
+        pos_hint: {'top': 1}
+        text: '25'+ u'\N{DEGREE SIGN}'+'C'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: tuesday_weather_label
+        font_size: 20
+        pos_hint: 1, None
+        pos_hint: {'top': 1}
+        text: '25'+ u'\N{DEGREE SIGN}'+'C'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: wednesday_weather_label
+        font_size: 20
+        pos_hint: 1, None
+        pos_hint: {'top': 1}
+        text: '25'+ u'\N{DEGREE SIGN}'+'C'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: thursday_weather_label
+        font_size: 20
+        pos_hint: 1, None
+        pos_hint: {'top': 1}
+        text: '25'+ u'\N{DEGREE SIGN}'+'C'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: friday_weather_label
+        font_size: 20
+        pos_hint: 1, None
+        pos_hint: {'top': 1}
+        text: '25'+ u'\N{DEGREE SIGN}'+'C'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: saturday_weather_label
+        font_size: 20
+        pos_hint: 1, None
+        pos_hint: {'top': 1}
+        text: '25'+ u'\N{DEGREE SIGN}'+'C'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: sunday_weather_label
+        font_size: 20
+        pos_hint: 1, None
+        pos_hint: {'top': 1}
+        text: '25'+ u'\N{DEGREE SIGN}'+'C'
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: monday_weather_description_label
+      font_size: 20
+      text: 'Description'
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: tuesday_weather_description_label
+      font_size: 20
+      text: 'Description'
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: wednesday_weather_description_label
+      font_size: 20
+      text: 'Description'
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: thursday_weather_description_label
+      font_size: 20
+      text: 'Description'
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: friday_weather_description_label
+      font_size: 20
+      text: 'Description'
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: saturday_weather_description_label
+      font_size: 20
+      text: 'Description'
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: sunday_weather_description_label
+      font_size: 20
+      text: 'Description'
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+
+<CalendarWindow>:
+  name: 'calendar_screen'
+  GridLayout:
+    cols: 7
+    rows: 2
+    row_force_default: True
+    row_default_height: 332
+    col_force_default: True
+    col_default_width: 142
+    Label:
+      id: monday
+      text: 'Monday'
+      font_size: 20
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: tuesday
+      text: 'Tuesday'
+      font_size: 20
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: wednesday
+      text: 'Wednesday'
+      font_size: 20
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: thursday
+      text: 'Thursday'
+      font_size: 20
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      text: 'Friday'
+      font_size: 20
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: saturday
+      text: 'Saturday'
+      font_size: 20
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: sunday
+      text: 'Sunday'
+      font_size: 20
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      #id: calendar_label
+      id: monday_event_label
+      text: 'Monday Event'
+      font_size: 15
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: tuesday_event_label
+      text: 'Tuesday Event'
+      font_size: 15
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: wednesday_event_label
+      text: 'Wednesday Event'
+      font_size: 15
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: thursday_event_label
+      text: 'Thursday Event'
+      font_size: 15
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: friday_event_label
+      text: 'Friday Event'
+      font_size: 15
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: saturday_event_label
+      text: 'Saturday Event'
+      font_size: 15
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+    Label:
+      id: sunday_event_label
+      text: 'Sunday Event'
+      font_size: 15
+      text_size: self.width, None
+      canvas:
+        Color:
+          rgba: 1, 1, 1, 0.4
+        Line:
+          width: 2.
+          rectangle: (self.x, self.y, self.width, self.height)
+ 
+
+<NewsWindow>:
+  name: 'news_screen'
+  GridLayout:
+    cols: 1
+    rows: 5
+    row_force_default: True
+    row_default_height: 133
+    col_force_default: True
+    col_default_width: 995
+    RelativeLayout:
+      Label:
+        id: author
+        font_size: 20
+        text: 'Author'
+        text_size: self.width, None
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: title
+        font_size: 20
+        text: 'Title'
+        text_size: self.width, None
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: description
+        font_size: 20
+        text: 'Description'
+        text_size: self.width, None
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: url
+        font_size: 20
+        text: 'Url'
+        text_size: self.width, None
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+    RelativeLayout:
+      Label:
+        id: content
+        font_size: 20
+        text: 'Content'
+        text_size: self.width, None
+        canvas:
+          Color:
+            rgba: 1, 1, 1, 0.4
+          Line:
+            width: 2.
+            rectangle: (self.x, self.y, self.width, self.height)
+
+
+<MainWindow>:
+  name: 'main_screen'
+  GridLayout:
+    row_force_default: True
+    row_default_height: 221
+    col_force_default: True
+    col_default_width: 331
+    cols: 3
+    rows: 3
+    RelativeLayout:
+      id: RelativeLabel1
+      Label:
+        id: label3
+        text: 'time'
+        font_size: 35
+        size_hint_y: None
+        size_hint_x: None
+        height: self.texture_size[1]
+        width: self.texture_size[0]
+        pos_hint: {'left': 0,'top': 1}
+        
+      Label:
+        id: label1
+        text: 'Calendar'
+        size_hint_y: None
+        size_hint_x: None
+        height: self.texture_size[1]
+        width: self.texture_size[0]
+        pos_hint: {'left': 1,'top': 0.8}
+        font_size: 30
+        #canvas structure
+        #canvas:
+        #  Color:
+        #    rgba: 1, 0, 0, 0.5
+        #  Rectangle:
+        #    size: self.size
+        #    pos: self.pos
+    Label:
+      id: label2
+      text: ''
+      font_size: 12
+    RelativeLayout:
+      id: RelativeLabel3
+      Label:
+        id: label9
+        text: 'weather Description'
+        font_size: 30
+        size_hint_y: None
+        #size_hint_x: None
+        #text_size: self.width, None
+        height: self.texture_size[1]
+        #width: self.texture_size[0]
+        pos_hint: {'top': 1, 'right': 1}
+        
+      Label:
+        id: label10
+        text: 'weather'
+        font_size: 40
+        size_hint_y: None
+        #size_hint_x: None
+        height: self.texture_size[1]
+        #width: self.texture_size[0]
+        pos_hint: {'right': 1,'top': 0.8}
+        
+    Label:
+      id: label4
+      text: ''
+      font_size: 15
+    Label:
+      id: label5
+      text: 'Hej!'
+      font_size: 100
+    Label:
+      id: label6
+      text: ''
+      font_size: 15
+    RelativeLayout:
+      id: RelativeLabel7
+      Label:
+        id: label7
+        size_hint_y: None
+        text_size: self.width, None
+        height: self.texture_size[1]
+        text: 'News'
+        font_size: 20
+    Label:
+      id: label8
+      text: ''
+      font_size: 12
+    Label:
+      id: label911
+      text: ''
+      font_size: 20
